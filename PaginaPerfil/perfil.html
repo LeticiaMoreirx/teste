@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<title>Restaurante Próximos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="item1">
+      <header>
+        <nav>
+          <a class="logo" href="../paginaHome/index.html">Restaurante Próximos</a>
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="nav-list">
+            <li><a href="../paginaHome/index.html">Início</a></li>
+            <li><a href="../paginaHome/index.html#sobre-conteudo">Sobre</a></li>
+            <li><a href="../PaginaRestaurantes/paginaRestaurantes.html">Restaurantes</a></li>
+            <li id="menu-cadastro"><a href="../paginaCadastro/cadastre-se.html">Cadastre-se</a></li>
+            <li id="menu-entrar"><a href="../PaginaLogin/login.html">login</a></li>
+            <li id="menu-perfil"><a href="../paginaPerfil/perfil.html">Perfil</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <!-- MENU LATERAL -->
+    <section class="menu">
+      <div class="profile-sidebar">
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            Central <span id="nomeTitulo"><span>
+          </div>
+        </div>
+
+        <div class="profile-usermenu">
+          <ul class="nav">
+            <li class="active">
+              <a href="../paginaPerfil/perfil.html">
+                <img src="../paginaPerfil/user.png" alt="Perfil">
+                Perfil</a>
+            </li>
+            <li id="liCadastroRestaurantes">
+              <a href="../PaginaPerfil/cadastroRestaurantes.html">
+                <img src="../paginaPerfil/restaurante.png" alt="Restaurantes">
+                Cadastro de Restaurantes</a>
+            </li>
+            <li id="liMeusRestaurantes">
+              <a href="../PaginaPerfil/meusRestaurantes.html">
+                <img src="../paginaPerfil/restaurante.png" alt="Restaurantes">
+                Meus Restaurantes </a>
+            </li>
+            <li>
+              <a href="../paginaHome/index.html" onclick="return sair()">
+                <img src="../paginaPerfil/logout.png" alt="Sair">
+                Sair</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FORMULÁRIO -->
+    <main>
+      <div style="overflow-x: auto;" class="col-md-9">
+        <div class="profile-content">
+          <div class="cadastrar">
+            <h1 class="cad-um">Perfil</h1>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th class="info">Nome completo</th>
+                  <td id="nome" value=""></td>
+                </tr>
+                <tr>
+                  <th class="info">E-mail</th>
+                  <td id="email" value=""></td>
+                </tr>
+                <tr>
+                  <th class="info">Telefone</th>
+                  <td id="telefone" value=""></td>
+                </tr>
+                </tr>
+                <tr>
+                  <th class="info">Categoria</th>
+                  <td id="categoria" value=""></td>
+                </tr>
+                <tr>
+                  <th class="info">Endereço</th>
+                  <td id="endereco" value=""></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="rodape">
+      <p>Restaurantes Próximos | 2024 </p>
+    </footer>
+    <script src="../menu/mobile-navbar.js"></script>
+    <script src="perfil.js"></script>
+</body>
+
+</html>

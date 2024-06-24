@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Restaurantes Próximos</title>
+    <link rel="stylesheet" href="style-restaurantes.css">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#listaRestaurantes .restaurant").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+        
+    <header>
+        <nav>
+            <a class="logo" href="../paginaHome/index.html">Restaurantes Próximos</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../paginaHome/index.html">Início</a></li>
+                <li><a href="../paginaHome/index.html#sobre-conteudo">Sobre</a></li>
+                <li><a href="../PaginaRestaurantes/paginaRestaurantes.html">Restaurantes</a></li>
+                <li id="menu-perfil"><a href="../paginaPerfil/perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="corpo">
+            <h1>Procure Restaurantes</h1>
+        </div>
+    </main>
+    <section class="conteudo">
+        <div class="pesquisa">
+            <input id="myInput" type="text" name="search" placeholder="Pesquisar">
+        </div>
+        <div id="listaRestaurantes">
+        </div>
+        <div class="pagination"></div>
+    </section>
+
+    <footer class="rodape">
+        <p>Restaurantes Próximos | 2024 </p>
+    </footer>
+    <script src="../PaginaRestaurantes/restaurantes.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <title>Restaurantes Próximos</title>
+    <link rel="stylesheet" href="style-login.css">
+    
+    
+    
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="../paginaHome/index.html">Restaurantes Próximos</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+              <li><a href="../paginaHome/index.html">Início</a></li>
+              <li><a href="../paginaHome/index.html#sobre-conteudo">Sobre</a></li>
+              <li><a href="../PaginaRestaurantes/paginaRestaurantes.html">Restaurantes</a></li>
+              <li id="menu-cadastro"><a href="../paginaCadastro/cadastre-se.html">Cadastre-se</a></li>
+              <li id="menu-entrar"><a href="../PaginaLogin/login.html">Login</a></li>
+              <li id="menu-perfil"><a href="../paginaPerfil/perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+    
+
+        <div class="content">    
+            
+          <!--FORMULÁRIO DE LOGIN-->
+          <div id="login">
+            
+              <h1>Login</h1> 
+
+              <div id="msgError"></div>
+
+              <p class="caixa"> 
+                <label id="emailLabel" for="email_login">E-mail</label>
+                <input id="email_login" name="email_login" required="required" type="text" placeholder="Insira seu e-mail"/>
+              </p>
+              
+              <p class="caixa"> 
+                <label id="senhaLabel" for="senha_login">Senha</label>
+                <input id="senha_login" name="senha_login" required="required" type="password" placeholder="Insira sua senha" /> 
+               
+              
+              <p class="caixa"> 
+                <input type="checkbox" name="manterlogado" id="manterlogado" value="" /> 
+                <label for="manterlogado">Manter-me logado</label>
+              </p>
+              
+              <p class="caixa"> 
+                <button onclick="entrar()" class="login-button" id="botao" type=”button”>Entrar</button>
+              </p>
+           
+          </div>
+          
+         
+          <footer class="rodape">
+            <p>Restaurantes Próximos | 2024 </p>
+        </footer>
+  
+  </main>
+  
+    <script src="../menu/mobile-navbar.js"></script>
+    <script src="script-login.js"></script>
+</body>
+  
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Restaurantes Próximos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="item1">
+      <header>
+        <nav>
+            <a class="logo" href="../paginaHome/index.html">Restaurantes Próximos</a>
+            <div class="mobile-men  u">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="../paginaHome/index.html">Início</a></li>
+                <li><a href="../paginaHome/index.html#sobre-conteudo">Sobre</a></li>
+                <li><a href="../PaginaRestaurantes/paginaRestaurantes.html">Restaurantes</a></li>
+                <li id="menu-cadastro"><a href="../paginaCadastro/cadastre-se.html">Cadastre-se</a></li>
+                <li id="menu-entrar"><a href="../PaginaLogin/login.html">Login</a></li>
+                <li id="menu-perfil"><a href="../paginaPerfil/perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+      </header>
+    </div>
+
+    <section class="menu">
+      <div class="profile-sidebar">
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            Central <span id="nomeTitulo"><span>
+          </div>
+        </div>
+
+        <div class="profile-usermenu">
+          <ul class="nav">
+            <li class="active">
+              <a href="../paginaPerfil/perfil.html">
+                <img src="../paginaPerfil/user.png" alt="Perfil">
+                Perfil</a>
+            </li>
+            <li>
+              <a href="../PaginaPerfil/cadastroRestaurantes.html">
+                <img src="../paginaPerfil/restaurante.png" alt="Restaurantes">
+                Cadastro de Restaurantes </a>
+            </li>
+            <li>
+              <a href="../PaginaPerfil/meusRestaurantes.html">
+                <img src="../paginaPerfil/restaurante.png" alt="Restaurantes">
+                Meus Restaurantes </a>
+            </li>
+            <li>
+              <a href="../paginaHome/index.html" onclick="return sair()">
+                <img src="../paginaPerfil/logout.png" alt="Sair">
+                Sair</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <div style="overflow-x: auto;" class="col-md-9">
+        <div class="profile-content">
+          <form onsubmit="return false" name="formulario">
+            <div class="cadastrar">
+              <h1 class="cad-um">Cadastro de Restaurantes</h1>
+              <div class="caixas">
+                <div class="caixa">
+                  <label>Nome do Restaurante</label><br />
+                  <input type="text" minlength="2" name="nome_restaurante" id="nome_restaurante" required
+                    placeholder="Nome do restaurante"><br />
+                </div>
+                <div class="caixa">
+                  <label>Imagem do Restaurante</label><br />
+                  <input type="text" minlength="6" name="imagem_restaurante" id="imagem_restaurante" required
+                    placeholder="Insira o link da imagem do restaurante"><br />
+                </div>
+                <div class="caixa">
+                  <label>Descrição</label><br />
+                  <textarea required placeholder="Escreva uma breve descrição sobre o restaurante" name="descricao"
+                    id="descricao"></textarea><br />
+                </div>
+                <div class="caixa">
+                  <label>Endereço</label><br />
+                  <input type="text" minlength="10" name="endereco" id="endereco" required
+                    placeholder="Endereço completo do restaurante"><br />
+                </div>
+                <div class="caixa">
+                  <label>Ano de Fundação</label><br />
+                  <input type="text" maxlength="4" name="ano_fundacao" id="ano_fundacao" required
+                    placeholder="Ano de fundação do restaurante"><br />
+                </div>
+                <div class="caixa">
+                  <label>Tipo de Cozinha</label><br />
+                  <select required name="tipo_cozinha" id="tipo_cozinha">
+                    <option value="null" disabled selected hidden>Selecione</option>
+                    <option value="Italiana">Italiana</option>
+                    <option value="Chinesa">Chinesa</option>
+                    <option value="Japonesa">Japonesa</option>
+                    <option value="Brasileira">Brasileira</option>
+                    <option value="Mexicana">Mexicana</option>
+                    <option value="Francesa">Francesa</option>
+                    <option value="Americana">Americana</option>
+                  </select><br />
+                </div>
+                <div class="caixa">
+                  <label>Faixa de Preço</label><br />
+                  <select required name="faixa_preco" id="faixa_preco">
+                    <option value="null" disabled selected hidden>Selecione</option>
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                  </select><br />
+                </div>
+                <div class="caixa">
+                  <label>Nome do Proprietário(a)</label><br />
+                  <input type="text" minlength="2" name="proprietario" id="proprietario" required
+                    placeholder="Digite o nome do proprietário"><br />
+                </div>
+                <div class="caixa">
+                  <label>Contato</label><br />
+                  <input type="text" name="contato" id="contato" minlength="6" required
+                    placeholder="Telefone ou e-mail"><br />
+                </div>
+                <div class="caixa">
+                  <label>Horário de Funcionamento</label><br />
+                  <input type="text" name="horario_funcionamento" id="horario_funcionamento" required
+                    placeholder="Ex: 10:00 - 22:00"><br />
+                </div>
+              </div>
+              <div>
+                <button onclick="return cadastrar()" class="cad-button" id="botao" type="button">Cadastrar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="rodape">
+      <p>Restaurantes Próximos | 2024 </p>
+    </footer>
+    <script src="../menu/mobile-navbar.js"></script>
+    <script src="../PaginaPerfil/Restaurantes.js"></script>
+  </div>
+</body>
+
+</html>
